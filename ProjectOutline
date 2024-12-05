@@ -1,0 +1,31 @@
+course-registration-system/
+├── node_modules/                     # Node modules for frontend and backend
+├── public/                            # Public assets for React frontend
+│   └── index.html
+├── src/                               # React components and frontend logic
+│   ├── components/                    # React components
+│   │   ├── LoginPage.tsx              # Login page component
+│   │   ├── RegistrationPage.tsx       # Course registration page component
+│   │   ├── SignupPage.tsx             # New user signup page
+│   │   ├── ConnectWalletPage.tsx      # Wallet connection page
+│   ├── contracts/                     # Smart contract JSON artifacts
+│   │   └── CourseRegistration.json
+│   ├── App.tsx                        # Main App component (entry point)
+│   ├── index.tsx                      # React entry point
+│   ├── styles.css                     # Global styles
+│   ├── registrationLogic.ts           # Logic for interacting with blockchain
+│   └── web3.ts                        # Web3 setup and helper functions
+├── backend/                           # Backend for handling API and database
+│   ├── models/                        # Mongoose models (User, Course)
+│   │   ├── User.js                    # User model schema
+│   │   └── Course.js                  # Course model schema (optional)
+│   ├── routes/                        # API route handlers
+│   │   └── authRoutes.js              # Authentication routes (Login, Register)
+│   ├── .env                           # Environment variables (DB URI, JWT secret)
+│   ├── server.js                      # Main server setup file for Express
+│   └── package.json                   # Backend dependencies
+├── .gitignore                         # Git ignore file
+├── hardhat.config.ts                  # Hardhat config for Ethereum smart contract
+├── package.json                       # Project dependencies and scripts (for frontend)
+├── tsconfig.json                      # TypeScript config (for frontend)
+└── README.md                          # Project documentation

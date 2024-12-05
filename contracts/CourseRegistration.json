@@ -1,0 +1,417 @@
+{
+    "abi": [ [
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": false,
+                    "internalType": "address",
+                    "name": "studentAddress",
+                    "type": "address"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "string",
+                    "name": "courseName",
+                    "type": "string"
+                }
+            ],
+            "name": "CourseRegistered",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": false,
+                    "internalType": "address",
+                    "name": "studentAddress",
+                    "type": "address"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "string",
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "string",
+                    "name": "email",
+                    "type": "string"
+                }
+            ],
+            "name": "StudentRegistered",
+            "type": "event"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "_professor",
+                    "type": "address"
+                }
+            ],
+            "name": "addProfessor",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string[]",
+                    "name": "_selectedCourses",
+                    "type": "string[]"
+                }
+            ],
+            "name": "registerCourses",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "_researchInterests",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_sop",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_researchProposal",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_professor",
+                    "type": "string"
+                }
+            ],
+            "name": "registerForPhD",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "_name",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_age",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_dob",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_location",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_aadharCard",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_abaCredits",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_email",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_phoneNumber",
+                    "type": "string"
+                }
+            ],
+            "name": "signUp",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "stateMutability": "nonpayable",
+            "type": "constructor"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "_student",
+                    "type": "address"
+                }
+            ],
+            "name": "getStudentCourses",
+            "outputs": [
+                {
+                    "internalType": "string[]",
+                    "name": "",
+                    "type": "string[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "_student",
+                    "type": "address"
+                }
+            ],
+            "name": "getStudentData",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "string",
+                            "name": "name",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "age",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "dob",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "location",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "aadharCard",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "abaCredits",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "email",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "phoneNumber",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string[]",
+                            "name": "courses",
+                            "type": "string[]"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "registered",
+                            "type": "bool"
+                        },
+                        {
+                            "components": [
+                                {
+                                    "internalType": "string",
+                                    "name": "researchInterests",
+                                    "type": "string"
+                                },
+                                {
+                                    "internalType": "string",
+                                    "name": "sop",
+                                    "type": "string"
+                                },
+                                {
+                                    "internalType": "string",
+                                    "name": "researchProposal",
+                                    "type": "string"
+                                },
+                                {
+                                    "internalType": "string",
+                                    "name": "professor",
+                                    "type": "string"
+                                }
+                            ],
+                            "internalType": "struct CourseRegistration.PhDApplication",
+                            "name": "phdApplication",
+                            "type": "tuple"
+                        }
+                    ],
+                    "internalType": "struct CourseRegistration.Student",
+                    "name": "",
+                    "type": "tuple"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "name": "isProfessor",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "professorAddresses",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "studentAddresses",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "name": "students",
+            "outputs": [
+                {
+                    "internalType": "string",
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "age",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "dob",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "location",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "aadharCard",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "abaCredits",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "string",
+                    "name": "email",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "phoneNumber",
+                    "type": "string"
+                },
+                {
+                    "internalType": "bool",
+                    "name": "registered",
+                    "type": "bool"
+                },
+                {
+                    "components": [
+                        {
+                            "internalType": "string",
+                            "name": "researchInterests",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "sop",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "researchProposal",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "professor",
+                            "type": "string"
+                        }
+                    ],
+                    "internalType": "struct CourseRegistration.PhDApplication",
+                    "name": "phdApplication",
+                    "type": "tuple"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        }
+    ] ],
+    "address": "0x74e927a2b046733b1ba2d4918f8671e787ae5a2397514287cc35e534da62c059"
+  }
+  
