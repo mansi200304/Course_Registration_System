@@ -1,0 +1,142 @@
+[
+    {
+        "title": "Data Structures and Algorithms",
+        "description": "Learn fundamental data structures and algorithms for efficient problem solving.",
+        "duration": "12 weeks",
+        "courseType": "Compulsory",
+        "courseRequirement": "BTech"
+    },
+    {
+        "title": "Database Management Systems",
+        "description": "Comprehensive study of database models, SQL, and database design.",
+        "duration": "10 weeks",
+        "courseType": "Compulsory",
+        "courseRequirement": "BTech"
+    },
+    {
+        "title": "Machine Learning Basics",
+        "description": "Introduction to machine learning concepts and algorithms.",
+        "duration": "8 weeks",
+        "courseType": "Elective",
+        "courseRequirement": "BTech"
+    },
+    {
+        "title": "Advanced Operating Systems",
+        "description": "Explores distributed systems, synchronization, and file systems.",
+        "duration": "10 weeks",
+        "courseType": "Compulsory",
+        "courseRequirement": "MTech"
+    },
+    {
+        "title": "Cloud Computing Fundamentals",
+        "description": "Study cloud architectures, services, and deployment models.",
+        "duration": "12 weeks",
+        "courseType": "Elective",
+        "courseRequirement": "MTech"
+    },
+    {
+        "title": "Cyber Security Practices",
+        "description": "Comprehensive introduction to cybersecurity techniques and tools.",
+        "duration": "14 weeks",
+        "courseType": "Compulsory",
+        "courseRequirement": "MTech"
+    },
+    {
+        "title": "Blockchain Technology",
+        "description": "Explore blockchain concepts, smart contracts, and use cases.",
+        "duration": "8 weeks",
+        "courseType": "Elective",
+        "courseRequirement": "MTech"
+    },
+    {
+        "title": "Quantum Computing Basics",
+        "description": "Introduction to the principles and algorithms of quantum computing.",
+        "duration": "8 weeks",
+        "courseType": "Elective",
+        "courseRequirement": "PhD"
+    },
+    {
+        "title": "Research Methodologies",
+        "description": "Learn effective research techniques, methodologies, and ethics.",
+        "duration": "16 weeks",
+        "courseType": "Compulsory",
+        "courseRequirement": "PhD"
+    },
+    {
+        "title": "Neural Networks and Deep Learning",
+        "description": "Study advanced neural network architectures and deep learning algorithms.",
+        "duration": "14 weeks",
+        "courseType": "Elective",
+        "courseRequirement": "PhD"
+    },
+    {
+        "title": "Internet of Things (IoT)",
+        "description": "Learn IoT architecture, protocols, and applications.",
+        "duration": "10 weeks",
+        "courseType": "Elective",
+        "courseRequirement": "BTech"
+    },
+    {
+        "title": "Software Engineering Principles",
+        "description": "Study software development lifecycle, agile methodologies, and design patterns.",
+        "duration": "12 weeks",
+        "courseType": "Compulsory",
+        "courseRequirement": "BTech"
+    },
+    {
+        "title": "Big Data Analytics",
+        "description": "Explore big data technologies, Hadoop, and data analysis.",
+        "duration": "10 weeks",
+        "courseType": "Elective",
+        "courseRequirement": "MTech"
+    },
+    {
+        "title": "Artificial Intelligence",
+        "description": "Learn AI concepts, applications, and advanced techniques.",
+        "duration": "12 weeks",
+        "courseType": "Compulsory",
+        "courseRequirement": "PhD"
+    },
+    {
+        "title": "Ethical Hacking",
+        "description": "Hands-on study of penetration testing and ethical hacking techniques.",
+        "duration": "10 weeks",
+        "courseType": "Elective",
+        "courseRequirement": "BTech"
+    },
+    {
+        "title": "High-Performance Computing",
+        "description": "Explore techniques for designing and analyzing high-performance systems.",
+        "duration": "10 weeks",
+        "courseType": "Elective",
+        "courseRequirement": "PhD"
+    },
+    {
+        "title": "Digital Signal Processing",
+        "description": "Study digital signals, transforms, and real-world applications.",
+        "duration": "10 weeks",
+        "courseType": "Elective",
+        "courseRequirement": "MTech"
+    },
+    {
+        "title": "Human-Computer Interaction",
+        "description": "Design user-friendly interfaces and study human-computer interaction principles.",
+        "duration": "8 weeks",
+        "courseType": "Elective",
+        "courseRequirement": "BTech"
+    },
+    {
+        "title": "Advanced Cryptography",
+        "description": "Learn advanced cryptographic algorithms and secure system design.",
+        "duration": "12 weeks",
+        "courseType": "Compulsory",
+        "courseRequirement": "PhD"
+    },
+    {
+        "title": "Natural Language Processing",
+        "description": "Introduction to NLP concepts and applications.",
+        "duration": "10 weeks",
+        "courseType": "Elective",
+        "courseRequirement": "PhD"
+    }
+]
