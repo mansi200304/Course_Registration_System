@@ -1,18 +1,25 @@
 const express = require("express");
-const { registerUser, loginUser } = require("../controllers/authControllers"); // Import controllers
-const { authenticateJWT } = require("../middleware/authMiddleware"); // Add JWT middleware for protected routes
+// const multer = require("multer");
+const { registerUser, loginUser } = require("../controllers/authControllers");
+
+// File upload configuration
+// const storage = multer.diskStorage({
+//     destination: (req, file, cb) => {
+//         cb(null, "uploads/"); // Files are saved in the 'uploads' directory
+//     },
+//     filename: (req, file, cb) => {
+//         cb(null, `${Date.now()}-${file.originalname}`);
+//     },
+// });
+
+// const upload = multer({ storage });
 
 const router = express.Router();
 
-// User registration route
+// User registration route (with file upload for PhD)
 router.post("/register-user", registerUser);
 
 // User login route
-router.post("/login-user", loginUser);
-
-// Example of a protected route that requires authentication (JWT check)
-router.get("/protected", authenticateJWT, (req, res) => {
-  res.status(200).json({ message: "This is a protected route!" });
-});
+router.post("/login", loginUser);
 
 module.exports = router;

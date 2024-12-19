@@ -1,5 +1,9 @@
 {
   "dependencies": {
-    "ethers": "^5.7.2"
+    "ethers": "^6.13.4"
+  },
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "style-loader": "^4.0.0"
   }
 }

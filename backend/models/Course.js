@@ -4,6 +4,11 @@ const courseSchema = new mongoose.Schema({
     title: { type: String, required: true },
     description: { type: String, required: true },
     duration: { type: String, required: true }, // E.g., "3 months"
+    professorId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Professor',
+        required: true
+      },
     courseRequired: {
         type: String,
         required: true,
@@ -12,7 +17,7 @@ const courseSchema = new mongoose.Schema({
     courseType: {
         type: String,
         required: true,
-        enum: ["Required", "Elective"], // This limits the values to 'Required' or 'Elective'
+        enum: ["Compulsory", "Elective"], // This limits the values to 'Required' or 'Elective'
     },
 });
 

@@ -1,9 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const User = require("../models/User"); // Import User model
+const User = require("../models/Students");
 
-// Middleware to verify authentication (if needed)
-const authenticate = require("../middleware/authenticate"); // Assuming you have authentication middleware
+const authenticate = require("../middleware/authenticate"); 
 
 // Route to fetch user data
 router.get("/data", authenticate, async (req, res) => {

@@ -5,16 +5,10 @@ const cors = require("cors");
 const authRoutes = require("./routes/authRoutes");
 const courseRoutes = require("./routes/courseRoutes");
 const userRoutes = require("./routes/userRoutes");
+const professorRoutes = require("./routes/professorRoutes");
 
 dotenv.config();
 const app = express();
-
-// Configure CORS to allow your frontend app to make requests
-// const corsOptions = {
-//   origin: 'http://localhost:3000',  // Make sure this matches your frontend URL
-//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-//   allowedHeaders: ['Content-Type'],
-// };
 
 // Use CORS middleware
 app.use(cors());
@@ -24,10 +18,15 @@ app.use(express.json()); // For parsing application/json
 app.use("/api", authRoutes); // User registration & login routes
 app.use("/api", courseRoutes); // Course-related routes
 app.use("/api/user", userRoutes);
+app.use("/api/professors", professorRoutes);
 
+
+const serverSelectionTimeoutMS = 5000;
 // MongoDB Connection
 mongoose
-    .connect(process.env.DB_URI)
+    .connect(process.env.DB_URI, {
+        serverSelectionTimeoutMS
+      })
     .then(() => {
         console.log("Connected to MongoDB");
     })
