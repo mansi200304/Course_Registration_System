@@ -10,8 +10,11 @@ const professorRoutes = require("./routes/professorRoutes");
 dotenv.config();
 const app = express();
 
-// Use CORS middleware
-app.use(cors());
+app.use(cors({
+    origin: '*', // or specify the domain explicitly
+    methods: ['GET', 'POST', 'PUT', 'DELETE','PATCH'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'boundary'],
+  }));
 app.use(express.json()); // For parsing application/json
 
 // API Routes

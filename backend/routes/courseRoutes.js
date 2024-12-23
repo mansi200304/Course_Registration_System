@@ -15,17 +15,17 @@ router.get('/courses', async (req, res) => {
 });
 
 // Add a new course (for example)
-router.post('/add-course', async (req, res) => {
-  const { title, description, duration } = req.body;
+// router.post('/add-course', async (req, res) => {
+//   const { title, description, duration } = req.body;
 
-  try {
-    const newCourse = new Course({ title, description, duration });
-    await newCourse.save();
-    res.status(201).json({ message: 'Course added successfully' });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Server error' });
-  }
-});
+//   try {
+//     const newCourse = new Course({ title, description, duration });
+//     await newCourse.save();
+//     res.status(201).json({ message: 'Course added successfully' });
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).json({ message: 'Server error' });
+//   }
+// });
 
 module.exports = router;

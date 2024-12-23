@@ -4,6 +4,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const Professor = require("../models/Professor");
 const authenticateProfessor = require("../middleware/authenticateProfessor");
+const authenticateStudent = require("../middleware/authenticateStudent");
 const Course = require('../models/Course');  // Ensure the Course model is correctly imported
 
 // Register a professor
@@ -99,13 +100,17 @@ router.get("/dashboard", authenticateProfessor, async (req, res) => {
         const professor = await Professor.findById(req.user.id);
         
         const courses = await Course.find({ professorId: professor._id })
-            .select('title description duration courseType');
+            .select('title description duration courseType subjectCode credits courseOfferedFor courseOfferedAs');
 
         res.status(200).json({
             professor: {
                 id: professor._id,
                 name: professor.name,
-                subject: professor.subject
+                subject: professor.subject,
+                credits: professor.credits,
+                subjectCode: professor.subjectCode,
+                courseOfferedFor: professor.courseOfferedFor,
+                courseOfferedAs: professor.courseOfferedAs,
             },
             courses
         });
@@ -120,15 +125,23 @@ router.get("/dashboard", authenticateProfessor, async (req, res) => {
 
 router.post("/course/add", authenticateProfessor, async (req, res) => {
     try {
-        const { title, description, duration, courseRequired, courseType } = req.body;
 
+
+        console.log("check data");
+        console.log(req.body);
+        
+        const { title, description, duration,subjectCode,credits, courseOfferedFor, courseOfferedAs } = req.body;
+
+        
         // Create new course with professorId
         const newCourse = new Course({
             title,
             description,
             duration,
-            courseRequired,
-            courseType,
+            courseOfferedFor,
+            courseOfferedAs,
+            subjectCode,
+            credits,
             professorId: req.user.id  // Add professor ID directly
         });
 
@@ -175,6 +188,44 @@ router.get("/courses", async (req, res) => {
         });
     }
 });
+
+
+router.post("/enroll", authenticateStudent, async (req, res) => {
+    try {
+        const { courseId } = req.body;
+
+        // Validate input
+        if (!courseId) {
+            return res.status(400).json({ message: "Course ID is required" });
+        }
+
+        // Check if the course exists
+        const course = await Course.findById(courseId);
+        if (!course) {
+            return res.status(404).json({ message: "Course not found" });
+        }
+
+        // Check if the student is already enrolled in the course
+        const student = await BTechMTechStudent.findById(req.user.id);
+        if (student.coursesSelected.includes(courseId)) {
+            return res.status(400).json({ message: "Already enrolled in this course" });
+        }
+
+        // Enroll the student in the course
+        student.coursesSelected.push(courseId);
+        await student.save();
+
+        // Add the student to the course's students array
+        course.students.push(student._id);
+        await course.save();
+
+        res.status(200).json({ message: "Successfully enrolled in the course", course });
+    } catch (error) {
+        console.error("Enrollment error:", error);
+        res.status(500).json({ message: "Server error", error: error.message });
+    }
+});
+
 
 
 module.exports = router;
